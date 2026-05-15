@@ -11,7 +11,7 @@ body{
 
 .board{
     width:  100vw;
-    height: 100vw;
+    height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -31,37 +31,70 @@ body{
     cursor: pointer;
 }
 
-.cell:nth-child(1), .cell:nth-child(2),.cell:nth-child(3) {
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
     border-top: none;
 }
 
-.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
     border-left: none;
 }
 
-.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
     border-right: none;
 }
 
-.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
     border-bottom: none;
 }
 
-.cell.x, .cell.circle{
+.cell.x,
+.cell.circle{
     cursor: not-allowed;
 }
 
 .board.x .cell:not(.circle):not(.x):hover {
-    background: linear-gradient(to top right, transparent calc(50% - var(--1)/2),var(--color) calc(50% - var(--l)/2)calc(50% + var (--l)/2),transparent calc(50% -var(--l)/2)),
-                linear-gradient(to bottom right, transparent calc(50% - var(--l)/2),var(--color) calc(50% -var(--l)/ 2) calc(50% +var(--l)/2),transparent calc(50% + var(--l)/2));
+    background: 
+    linear-gradient(to top right, 
+        transparent calc(50% - var(--l) / 2),
+        var(--color) calc(50% - var(--l) / 2),
+        var(--color) calc(50% + var(--l) / 2),
+        transparent calc(50% + var(--l) / 2)
+    ),
+    linear-gradient(to bottom right, 
+        transparent calc(50% - var(--l) / 2),
+        var(--color) calc(50% - var(--l) / 2),
+        var(--color) calc(50% + var(--l) / 2),
+        transparent calc(50% + var(--l) /2 )
+     );
     background-size: 80% 80%;
     background-repeat: no-repeat;
     background-position: center;            
 }
 
-.cell:not(.circle).x {
-	background: linear-gradient(to top right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2)),
-				linear-gradient(to bottom right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2));
+.cell.x {
+	background: 
+    linear-gradient(to top right,
+        transparent calc(50% - var(--l) / 2),
+        var(--color-set) calc(50% - var(--l) / 2),
+        var(--color-set) calc(50% + var(--l) / 2),
+        transparent calc(50% + var(--l) / 2)
+        ),
+
+	linear-gradient(to bottom right, 
+        transparent calc(50% - var(--l) / 2),
+        var(--color-set) calc(50% - var(--l) / 2), 
+        var(--color-set) calc(50% + var(--l) / 2),
+        transparent calc(50% + var(--l) / 2)
+        );
+
 	background-size: 80% 80%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -69,7 +102,9 @@ body{
 
 .board.circle .cell:not(.circle):not(.x):hover{
     background: radial-gradient(var(--color) 60%,transparent 60%);
-}.cell:not(.x).cell.circle {
+}
+
+.cell.circle {
     background: radial-gradient(var(--color-set) 60%,transparent 60%);
 }
 
@@ -100,7 +135,7 @@ body{
 
 .winning-message button:hover {
     background-color: var(--color-set);
-    color: rgb(216, 219, 26);
+    color: rgb(52, 53, 5);
     border-color: rgb(103, 104, 122);
 }
 

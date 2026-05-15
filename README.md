@@ -42,14 +42,17 @@ Obiettivi del progetto
 
 Questo progetto è stato creato per:
 
--praticare JavaScript
-migliorare la logica di programmazione
-imparare la manipolazione del DOM
+- praticare JavaScript
+- migliorare la logica di programmazione
+- imparare la manipolazione del DOM
+
 Miglioramenti futuri
-Modalità contro IA
-Effetti sonori
-Salvataggio punteggi
-Tema dark/light
+
+- Modalità contro IA
+- Effetti sonori
+- Salvataggio punteggi
+- Tema dark/light
+
 Licenza
 
 Progetto open source disponibile sotto licenza MIT.

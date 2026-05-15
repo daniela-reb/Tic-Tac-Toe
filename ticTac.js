@@ -91,18 +91,3 @@ function checkWin(currentClass) {
     })
 }
 
-function restartGame () {
-     board = ["", "", "", "", "", "", "", "", ""];
-
-     square.forEach( s => {
-        s.textContent ="";
-        s.classList.remove("o", "x");
-     });
-
-     const msg = document.getElementById("winner-message");
-     msg.style.display = none;
-     msg.classList.remove("win-x", "win-o");
-
-     document.getElementById("game").style.display = "grid";
-
-};
